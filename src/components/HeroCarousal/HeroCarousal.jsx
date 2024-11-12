@@ -1,19 +1,37 @@
 import React from 'react';
-import Slider from "react-slick";
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import HeroSlider from "react-slick";
+// componenets
+import { NextArrow,PrevArrow } from './Arrows';
+
+
 
 const HeroCarousal = () => {
+   
+    const settingsLg={
+        arrows:true,
+        autoplay:true,
+        centerMode:true,
+        centerPadding:"300px",
+        slidesToShow: 1,
+       infinite:true,
+        slidesToScroll:1, 
+        dots: true,
+        nextArrow:<NextArrow/>,
+        prevArrow:<PrevArrow/>
+    }
+
+
+
     const settings = {
         arrows:true,
-        centerMode:true,
         dots: true,
-        Infinity:true,
-        centerPadding:"120px",
+        infinite:true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll:1,
+        nextArrow:<NextArrow/>,
+        prevArrow:<PrevArrow/>,
+       
     };
 
     const images = [
@@ -27,13 +45,34 @@ const HeroCarousal = () => {
 
     return (
         <>
-            <Slider {...settings}>
-                {images.map((image, index) => (
-                    <div key={index} className="w-20 h-[300px]">
-                        <img src={image} alt="carousel" className="w-full h-full object-cover" />
-                    </div>
-                ))}
-            </Slider>
+                <div className="lg:hidden">
+        <HeroSlider {...settings}>
+          {images.map((image) => (
+            <div className="w-full h-56 md:h-80 py-3 ">
+              <img
+                src={image}
+                alt="testing"
+                className="w-full h-full"
+              />
+            </div>
+          ))}
+        </HeroSlider>
+      </div>
+
+      <div className="hidden lg:block">
+        <HeroSlider {...settingsLg}>
+          {images.map((image) => (
+            <div className="w-full h-96 px-2 py-3">
+              <img
+                src={image}
+                alt="testing"
+                className="w-full h-full rounded-md"
+              />
+            </div>
+          ))}
+        </HeroSlider>
+      </div>
+
         </>
     );
 }

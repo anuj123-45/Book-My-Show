@@ -62,7 +62,7 @@ const Navlg = () => {
 const Navbar = () => {
     return (
         <>
-            <nav className='bg-gray-500 p-4'>
+            <nav className='bg-gray-500 p-4 w-full'>
                 {/*Mobile screen*/}
                 <div className='md:hidden'>
                     <Navsm />
