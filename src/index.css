@@ -11,3 +11,28 @@
     right:3% !important;
     z-index: 1;
 }
+
+
+/* Style for larger screens */
+.slick-prev, .slick-next {
+    top: 50% !important; /* Center vertically */
+    transform: translateY(-50%) !important;
+}
+
+/* For medium screens */
+@media (max-width: 768px) {
+    .slick-prev, .slick-next {
+        top: 45% !important;/* Adjust if needed to fit design */
+        width: 24px !important;  /* Smaller arrow size for tablets */
+        height: 24px !important;
+    }
+}
+
+/* For small screens */
+@media (max-width: 480px) {
+    .slick-prev, .slick-next {
+        top: 40% !important; /* Adjust to your preference */
+        width: 20px !important; /* Smaller arrow size for mobiles */
+        height: 20px !important;
+    }
+}
