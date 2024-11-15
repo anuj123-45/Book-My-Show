@@ -1,7 +1,7 @@
 import React from 'react'
 import EntertainmentCardSlider from '../Entertainment/EntertainmentCard'
-import Premier from '../Premier/Premier'
-
+import premieres from '../../config/Images.config'
+import PosterSlider from '../PosterSlider/PosterSlider'
 const Home = () => {
     return (
         <>
@@ -17,10 +17,17 @@ const Home = () => {
                     <div className='hidden md:flex' >
                 <img src="https://tinyurl.com/57xkh22d" alt="premier-image" className='w-full h-full' />
                 </div> 
-                        <Premier />
+                     <PosterSlider images={premieres} title='Premiers' subtitle='Brand new Releases every Friday' isDark/>
                     </div>
                 </div>
 
+                <div className="container mx-auto px-4 my-10">
+                <PosterSlider images={premieres} title='Your Music Studio' isDark={false}/>
+                </div>
+
+                <div className="container mx-auto px-4 my-10">
+                <PosterSlider images={premieres} title='Outdoor Events' isDark={false}/>
+                </div>
         </>
     )
 }
