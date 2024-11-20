@@ -13,6 +13,7 @@ return(
        <Navbar/>
        <HeroCarousal/>
         {props.children}
+      
     </div>
     </>
 )

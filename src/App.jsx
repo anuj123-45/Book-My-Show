@@ -19,7 +19,7 @@ function App() {
   return (
     <Routes>
 
-      {DefaultHoc({ path: "/", component: Home })}
+      {DefaultHoc({ path: "/", component: Home})}
       {MovieHOC({ path: "/movie/:id", component: Movie })}
      
     </Routes>

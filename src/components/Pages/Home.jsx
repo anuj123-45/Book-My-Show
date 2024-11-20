@@ -13,12 +13,16 @@ const Home = () => {
             </div>
 
             <div className=' bg-anuj-800 py-16'>
+
                     <div className="container mx-auto px-4">
+
                     <div className='hidden md:flex' >
                 <img src="https://tinyurl.com/57xkh22d" alt="premier-image" className='w-full h-full' />
                 </div> 
                      <PosterSlider images={premieres} title='Premiers' subtitle='Brand new Releases every Friday' isDark/>
+                    
                     </div>
+
                 </div>
 
                 <div className="container mx-auto px-4 my-10">

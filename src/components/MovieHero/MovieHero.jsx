@@ -8,7 +8,7 @@ const MovieHero = () => {
             <div >
                 {/* Mobile */}
                 <div className=' relative md:hidden w-full' style={{ height: "calc(180vw)" }}>
-                    <div className='absolute bottom-2 z-20 left-8'>
+                <div className='absolute bottom-2 z-20 left-8'>
                        <MovieInfo/>
                     </div>
                     <div className='w-full h-56 bg-opacity-50 absolute bottom-0 bg-black z-10'/>
