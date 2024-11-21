@@ -2,10 +2,47 @@ import React from 'react'
 import MovieHero from '../MovieHero/MovieHero'
 import { FaCcVisa , FaCcApplePay } from "react-icons/fa";
 import Cast from '../Cast/Cast';
-
-
+import PosterSlider from '../PosterSlider/PosterSlider';
+import premieres from '../../config/Images.config';
 
 const Movie = () => {
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+       
+        {
+            breakpoint: 1024, // Medium screens (tablets, small laptops)
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite:true
+            },
+        },
+        {
+            breakpoint: 768, // Smaller tablets
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide:2,
+            },
+        },
+        {
+            breakpoint: 480, // Mobile phones
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+            },
+        },
+    ],
+};
+
+ 
+
   return (
     <>
       <MovieHero />
@@ -68,11 +105,36 @@ const Movie = () => {
      <Cast src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/kartik-aaryan-1045198-1685968467.jpg' name='Kartik Aryan' role='Actor'/>
      <Cast src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/kartik-aaryan-1045198-1685968467.jpg' name='Kartik Aryan' role='Actor'/>
      </div>       
-
-
-
      </div>
 
+     <div className='my-8'>
+          <hr />
+        </div>
+
+        <div className='my-8'> 
+     <h2 className='font-bold text-gray-800 text-2xl mb-5'>Crew</h2>
+     <div className='flex flex-wrap gap-3'>
+     <Cast src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/kartik-aaryan-1045198-1685968467.jpg' name='Kartik Aryan' role='Actor'/>
+     <Cast src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/kartik-aaryan-1045198-1685968467.jpg' name='Kartik Aryan' role='Actor'/>
+     <Cast src='https://in.bmscdn.com/iedb/artist/images/website/poster/large/kartik-aaryan-1045198-1685968467.jpg' name='Kartik Aryan' role='Actor'/>
+     </div>       
+     </div>
+
+     <div className='my-8'>
+          <hr />
+        </div>
+
+        <div className='my-8'>
+         <PosterSlider images={premieres} title='You might also like' isDark={false} config={settings} />
+        </div>
+        
+        <div className='my-8'>
+          <hr />
+        </div>
+
+        <div className='my-8'>
+         <PosterSlider images={premieres} title='BMS XCLUSIV' isDark={false} config={settings} />
+        </div>
 
 
 
