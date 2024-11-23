@@ -16,6 +16,7 @@ import Movie from './components/Pages/Movie';
 import Plays from './components/Pages/Plays';
 
 
+
 //axios default setting
 axios.defaults.baseURL="https://api.themoviedb.org/3";
 axios.defaults.params={}

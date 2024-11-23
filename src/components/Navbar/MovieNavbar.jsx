@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { CiShare2 } from "react-icons/ci";
 import { IoChevronDownSharp } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
-
+import { MovieContext } from '../../Context/MovieContext';
 
 const Navsm = () => {
+    const {movie}=useContext(MovieContext);
     return <>
         <div className='text-white p-4 flex items-center justify-between'>
             <div>
-                <h3 className='text-xl font-bold'>It All Starts Here!</h3>
+                <h3 className='text-xl font-bold'>{movie.original_title}</h3>
               
             </div>
             <div className='w-8 h-8'>
