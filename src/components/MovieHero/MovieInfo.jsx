@@ -4,6 +4,9 @@ import { MovieContext } from '../../Context/MovieContext'
 
 const MovieInfo = () => {
   const {movie}=useContext(MovieContext)
+
+  // optional chaining
+  const genres=movie.genres && movie.genres.map(({name})=>name).join(", ")
   return (
     <>
     <div>
@@ -13,10 +16,10 @@ const MovieInfo = () => {
         </div>
         <span className='text-white bg-anuj-800 rounded-md p-1 text-xs'> Streaming now</span>
        </div>
-        <h1 className=' text-white lg:text-5xl py-5 hidden lg:block'>{movie.original_title}</h1>
+        <h1 className=' text-white lg:text-5xl py-5 hidden lg:block'>{movie.title}</h1>
         <div className='text-white flex flex-col gap-3'>
-            <h4>4k &bull; English &bull; Action &bull;</h4>
-            <h4>1:53 &bull; Action, Sci-fi, Thriller &bull; 13+ &bull;</h4>
+            <h4>4k &bull; {movie.original_language}</h4>
+            <h4>{(movie.runtime/60).toFixed(2)} h &bull; {genres} &bull; 13+ &bull;</h4>
         </div>
         <div className="text-white mt-3 flex gap-5 md:w-screen lg:w-full">
   <button className="bg-anuj-1000 w-full cursor-pointer px-5 py-2 rounded-md">

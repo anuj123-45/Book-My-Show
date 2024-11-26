@@ -16,7 +16,7 @@ const MovieLayout = (props) => {
     }
     reqMovie();
 
-  }, []);
+  }, [id]);
 
   return (
     <>

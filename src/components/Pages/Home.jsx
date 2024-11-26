@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import EntertainmentCardSlider from '../Entertainment/EntertainmentCard'
-import premieres from '../../config/Images.config'
 import PosterSlider from '../PosterSlider/PosterSlider'
 import axios from 'axios'
 const Home = () => {
