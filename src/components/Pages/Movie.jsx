@@ -10,7 +10,7 @@ import Slider from 'react-slick';
 
 
 const Movie = () => {
-  const { id } = useParams();
+  const { id } = useParams(); 
   const { movie } = useContext(MovieContext);
   const [castdetails, setcast] = useState([]);
   const [crewdetails, setcrew] = useState([]);
@@ -212,7 +212,6 @@ const Movie = () => {
         <div className='my-8'>
           <PosterSlider images={recommended} title='Recommended' isDark={false} config={settings} />
         </div>
-
 
 
 

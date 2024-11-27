@@ -7,7 +7,7 @@ import axios from "axios";
 
 const MovieLayout = (props) => {
 
-  const { id } = useParams();
+  const { id } = useParams(); 
   const {setMovie } = useContext(MovieContext);
   useEffect(() => {
     const reqMovie = async () => {
@@ -15,7 +15,6 @@ const MovieLayout = (props) => {
       setMovie(getMovie.data)
     }
     reqMovie();
-
   }, [id]);
 
   return (

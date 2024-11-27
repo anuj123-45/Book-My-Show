@@ -22,8 +22,8 @@ const Navsm = () => {
 
 const Navlg = () => {
     return <>
-        <div className="container mx-auto p-2 flex items-center justify-between">
-            <div className="flex items-center w-1/2 gap-2">
+        <div className="container mx-auto px-4 flex items-center justify-between">
+            <div className="flex items-center w-1/2 gap-3">
 
                 <div className="w-20 h-10">
                     <img
