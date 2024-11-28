@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Button , Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import React from 'react'
 
 export default function Payment({isOpen,setIsOpen,price}) {
@@ -7,6 +7,25 @@ export default function Payment({isOpen,setIsOpen,price}) {
     setIsOpen(false)
   }
 
+  const launchRazorpay=()=>{
+    let options={
+      key:"rzp_test_DHnnGYkaWqELWf",
+      amount:price*100,
+      currency:'INR',
+      name:"Book My Show",
+      description:"Movie Purchase or Rental",
+      image:'https://tinyurl.com/bdd8zr7v',
+      handler :  () =>{
+        setIsOpen(false)
+        alert('Payment Done')
+      },
+      theme:{color:"#c4242d"},
+    }
+
+    const RazorPay=new window.Razorpay(options)
+    RazorPay.open();
+
+  }
   
 
   return (
@@ -28,7 +47,7 @@ export default function Payment({isOpen,setIsOpen,price}) {
         <div className=" w-full mt-4 ">
           <Button
             className=" w-full inline-flex justify-center px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md hover:bg-red-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-50"
-            onClick={close}
+            onClick={launchRazorpay}
           >
             Pay ₹{price}
           </Button>
@@ -47,3 +66,5 @@ export default function Payment({isOpen,setIsOpen,price}) {
     </>
   )
 }
+
+

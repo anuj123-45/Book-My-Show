@@ -22,7 +22,7 @@ const Navsm = () => {
 
 const Navlg = () => {
     return <>
-        <div className="container mx-auto px-4 flex items-center justify-between">
+        <div className="container px-4 flex items-center justify-between"  style={{scrollbarGutter:"stable",overflow:"hidden"}}>
             <div className="flex items-center w-1/2 gap-3">
 
                 <div className="w-20 h-10">
