@@ -4,6 +4,7 @@ import { IoChevronDownSharp } from "react-icons/io5";
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMenu } from "react-icons/io";
 import { MovieContext } from '../../Context/MovieContext';
+import { Link } from 'react-router-dom';
 
 const Navsm = () => {
     const {movie}=useContext(MovieContext);
@@ -22,16 +23,19 @@ const Navsm = () => {
 
 const Navlg = () => {
     return <>
-        <div className="container px-4 flex items-center justify-between"  style={{scrollbarGutter:"stable",overflow:"hidden"}}>
+       <div className="container px-4 flex items-center justify-between"  style={{scrollbarGutter:"stable",overflow:"hidden"}}>
             <div className="flex items-center w-1/2 gap-3">
 
-                <div className="w-20 h-10">
+              <Link to='/'>
+              <div className="w-20 h-10">
                     <img
                         src="https://getlogo.net/wp-content/uploads/2020/04/bookmyshow-logo-vector.png"
                         alt="logo"
                         className="w-full h-full"
                     />
                 </div>
+              
+              </Link>
 
                 <div className="flex items-center gap-3 bg-white px-3 py-2 rounded-md w-full">
                     <IoSearchOutline />
@@ -50,7 +54,7 @@ const Navlg = () => {
                 </div>
 
             </div>
-        </div>
+        </div> 
 
     </>
 }
