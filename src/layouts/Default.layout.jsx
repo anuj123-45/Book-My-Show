@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar/navbar";
 import HeroCarousal from "../components/HeroCarousal/HeroCarousal";
+import Footer from "../components/Footer/Footer";
 
 
 
@@ -13,6 +14,7 @@ return(
        <Navbar/>
        <HeroCarousal/>
         {props.children}
+        <Footer/>
       
     </div>
     </>
