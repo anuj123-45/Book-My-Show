@@ -3,7 +3,7 @@ import Poster from '../Poster/Poster';
 import Slider from 'react-slick';
 import settings from '../../config/PosterCarousel.config';
 
-const PosterSlider = (props) => {
+const PosterSlider = (props) => {  
   const sliderConfig=props.config ? props.config : settings;
   return (
     <>

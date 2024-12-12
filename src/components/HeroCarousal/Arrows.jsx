@@ -5,7 +5,7 @@ export const NextArrow = (props) => {
     <>
       <div
         className={props.className}
-        style={{ ...props.style, backgroundColor: "black" }}
+        style={{ ...props.style, backgroundColor: "black"}}
         onClick={props.onClick}
       />
     </>

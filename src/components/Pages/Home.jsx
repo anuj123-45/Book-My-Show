@@ -33,19 +33,6 @@ const Home = () => {
         reqUpcomingMovies();
     }, []);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     return (
         <>
             <div className="conatiner p-8 ">
