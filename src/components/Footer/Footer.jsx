@@ -3,12 +3,7 @@ import { MdOutlineTempleBuddhist } from "react-icons/md";
 import { MdSupportAgent } from "react-icons/md";
 import { IoTicketSharp } from "react-icons/io5";
 import { SlEnvolopeLetter } from "react-icons/sl";
-
-
-
-
-
-
+import { SiBookmyshow } from "react-icons/si";
 
 
 const Footer = () => {
@@ -16,7 +11,7 @@ const Footer = () => {
     <>
 
       <div className='hidden lg:flex '>
-        <div className='w-full  bg-anuj-1100 py-5'>
+        <div className='w-full  bg-anuj-1100 py-5 cursor-pointer'>
 
           <div className='flex justify-around'>
             <div className="flex items-center gap-3 text-white">
@@ -34,8 +29,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='w-full bg-anuj-1200 mt-5 py-5'>
-            <div className='flex justify-around'>
+          <div className='w-full bg-anuj-1200 mt-10 py-5'>
+            <div className='flex justify-evenly'>
 
               <div className='flex flex-col items-center text-anuj-1300 hover:text-white gap-2'>
                 <div className="w-36 h-14">
@@ -60,6 +55,13 @@ const Footer = () => {
             </div>
           </div>
 
+          <div className='flex justify-center items-center mt-20 px-4 gap-4 '>
+            <div className='w-2/3  text-anuj-1300'><hr className='w-full  text-anuj-1300' /></div>
+            <div className='w-20 h-14  text-white'>
+              <SiBookmyshow className='w-full h-full' />
+            </div>
+            <div className='w-2/3 '><hr className='w-full  text-anuj-1300' /></div>
+          </div>
 
 
 
