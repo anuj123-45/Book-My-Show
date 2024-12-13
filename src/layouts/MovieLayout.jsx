@@ -3,7 +3,9 @@ import MovieNavbar from "../components/Navbar/MovieNavbar";
 import { useParams} from "react-router-dom";
 import { useContext ,useEffect} from "react";
 import { MovieContext } from "../Context/MovieContext";
+import Footer from "../components/Footer/Footer";
 import axios from "axios";
+
 
 const MovieLayout =(props) => {
 
@@ -23,6 +25,7 @@ const MovieLayout =(props) => {
       <div>
         <MovieNavbar />
         {props.children}
+        <Footer/>
       </div>
 
     </>
