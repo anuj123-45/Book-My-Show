@@ -4,6 +4,14 @@ import { MdSupportAgent } from "react-icons/md";
 import { IoTicketSharp } from "react-icons/io5";
 import { SlEnvolopeLetter } from "react-icons/sl";
 import { SiBookmyshow } from "react-icons/si";
+import { FaFacebook, FaSquareXTwitter } from "react-icons/fa6";
+import { FaInstagramSquare, FaYoutube, FaPinterest, FaLinkedin } from "react-icons/fa";
+import { Link } from 'react-router-dom'
+
+
+
+
+
 
 
 const Footer = () => {
@@ -11,7 +19,7 @@ const Footer = () => {
     <>
 
       <div className='hidden lg:flex '>
-        <div className='w-full  bg-anuj-1100 py-5 cursor-pointer'>
+        <div className='w-full  bg-anuj-1100 py-14 cursor-pointer'>
 
           <div className='flex justify-around'>
             <div className="flex items-center gap-3 text-white">
@@ -63,16 +71,46 @@ const Footer = () => {
             <div className='w-2/3 '><hr className='w-full  text-anuj-1300' /></div>
           </div>
 
+          <div className='flex justify-center items-center mt-16 gap-5'>
+            <Link to='https://www.facebook.com/'>
+              <div className="w-10 h-8 text-anuj-1500 hover:text-white">
+                <FaFacebook className="w-full h-full" />
+              </div>
+
+            </Link>
+            <Link to='https://www.twitter.com/'>
+              <div className="w-10 h-8 text-anuj-1500 hover:text-white">
+                <FaSquareXTwitter className="w-full h-full" />
+              </div>
+            </Link>
+            <Link to='https://www.instagram.com/'>
+              <div className="w-10 h-8 text-anuj-1500 hover:text-white">
+                <FaInstagramSquare className="w-full h-full" />
+              </div>
+            </Link>
+            <Link to='https://www.youtube.com/'>
+              <div className="w-10 h-8 text-anuj-1500 hover:text-white">
+                <FaYoutube className="w-full h-full" />
+              </div>
+            </Link>
+            <Link to='https://www.pinterest.com/'>
+              <div className="w-10 h-8 text-anuj-1500 hover:text-white">
+                <FaPinterest className="w-full h-full" />
+              </div>
+            </Link>
+            <Link to='https://www.linkedin.com/'>
+              <div className="w-10 h-8 text-anuj-1500 hover:text-white">
+                <FaLinkedin className="w-full h-full" />
+              </div>
+            </Link>
+          </div>
 
 
-
-
-
-
-
-
-
-
+          <div className='flex flex-col items-center text-[11px] mt-14 text-anuj-1500'>
+            <p>Copyright 2024 @ Bigtree Entertainment Pvt. Ltd. All Rights Reserved.</p>
+            <p>The content and images used in this site are copyright protected and copyrights vtests with the respective owners. The usage of the content and images on this website is intended to promote the works and no endorsement of the artist shall be implied. </p>
+            <p>Unauthorized use is prohibited and punishable by law. </p>
+          </div>
 
         </div>
       </div>
