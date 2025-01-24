@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
 
             <div className='text-white'>
-              <button className='bg-anuj-1000  px-5 py-2 rounded-md'> Conatact today!</button>
+              <button className='bg-anuj-1000  px-5 py-2 rounded-md'> Contact today!</button>
             </div>
           </div>
 
